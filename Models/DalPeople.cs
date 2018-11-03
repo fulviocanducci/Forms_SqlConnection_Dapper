@@ -35,7 +35,11 @@ namespace Models
         public IEnumerable<TModel> Get<TModel>(string filter, params string[] select) where TModel: class
         {
             string sql = $"SELECT {"[" + string.Join("],[", select) + "]"} FROM [People] ";
-            sql += " WHERE [People].[Name] LIKE @Filter ORDER BY [People].[Name] ASC";
+            if (!string.IsNullOrEmpty(filter))
+            {
+                sql += " WHERE [People].[Name] LIKE @Filter ";
+            }
+            sql += " ORDER BY [People].[Name] ASC";
             return Connection.Get<TModel>(sql, filter, select);
         }
 
