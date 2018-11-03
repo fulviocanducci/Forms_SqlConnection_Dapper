@@ -30,7 +30,7 @@ namespace WindowsFormsAppExample
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (Validate())
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 People people = new People();
                 people.Name = TxtName.Text;
@@ -87,7 +87,7 @@ namespace WindowsFormsAppExample
             }
             else
             {
-                ErrorProviderCollection.SetError(TxtName, "");
+                ErrorProviderCollection.SetError(TxtName, null);                
             }
         }
 
@@ -100,7 +100,7 @@ namespace WindowsFormsAppExample
             }
             else
             {
-                ErrorProviderCollection.SetError(TxtBirthday, "");
+                ErrorProviderCollection.SetError(TxtBirthday, null);
             }
         }
 
@@ -113,7 +113,7 @@ namespace WindowsFormsAppExample
             }
             else
             {
-                ErrorProviderCollection.SetError(TxtSalary, "");
+                ErrorProviderCollection.SetError(TxtSalary, null);
             }
         }
     }

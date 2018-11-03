@@ -52,28 +52,28 @@
     <Compile Include="FrmPeople.Designer.cs">
       <DependentUpon>FrmPeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\ViewModelGrid.cs" />
-    <EmbeddedResource Include="FrmPeople.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <Compile Include="ViewModels\ViewModelGrid.cs" />    
     <Compile Include="FrmPeopleCreateOrEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPeopleCreateOrEdit.Designer.cs">
       <DependentUpon>FrmPeopleCreateOrEdit.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FrmPeopleCreateOrEdit.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </Compile>    
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmPrincipal.resx">
-      <SubType>Designer</SubType>
+	<EmbeddedResource Include="FrmPeople.resx">
+      <DependentUpon>FrmPeople.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeopleCreateOrEdit.resx">
+      <DependentUpon>FrmPeopleCreateOrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>    
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
